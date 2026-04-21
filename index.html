@@ -27,6 +27,18 @@
 
       <section class="question-section" aria-label="질문 입력">
         <label for="questionInput" class="input-label">질문 입력</label>
+        <div class="draw-mode" role="radiogroup" aria-label="카드 뽑기 방식">
+          <input
+            type="radio"
+            id="drawModeOne"
+            name="drawMode"
+            value="1"
+            checked
+          />
+          <label for="drawModeOne" class="draw-mode-option">1장 뽑기</label>
+          <input type="radio" id="drawModeThree" name="drawMode" value="3" />
+          <label for="drawModeThree" class="draw-mode-option">3장 뽑기</label>
+        </div>
         <textarea
           id="questionInput"
           name="questionInput"

@@ -95,6 +95,40 @@ body {
   font-size: 0.95rem;
 }
 
+.draw-mode {
+  display: inline-flex;
+  gap: 0.4rem;
+  padding: 0.25rem;
+  border: 1px solid #473f6e;
+  background: rgba(14, 11, 25, 0.8);
+  border-radius: 10px;
+  margin-bottom: 0.85rem;
+}
+
+.draw-mode input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.draw-mode-option {
+  padding: 0.48rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  color: #c7bff0;
+  font-size: 0.87rem;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+#drawModeOne:checked + .draw-mode-option,
+#drawModeThree:checked + .draw-mode-option {
+  background: linear-gradient(180deg, rgba(163, 147, 255, 0.28), rgba(127, 111, 221, 0.2));
+  border-color: #7a69d0;
+  color: #f0ebff;
+}
+
 #questionInput {
   width: 100%;
   resize: vertical;
@@ -186,6 +220,25 @@ body {
 
 .tarot-result {
   color: var(--text-main);
+}
+
+.tarot-result-card {
+  padding: 0.85rem;
+  border: 1px solid #3b325f;
+  border-radius: 10px;
+  background: rgba(11, 9, 20, 0.5);
+}
+
+.result-multi {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.result-card-order {
+  margin: 0 0 0.65rem;
+  font-size: 0.82rem;
+  color: #b9afe3;
+  font-weight: 700;
 }
 
 .result-question {
@@ -295,6 +348,20 @@ body {
     font-size: 0.93rem;
   }
 
+  .draw-mode {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 0.38rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .draw-mode-option {
+    text-align: center;
+    font-size: 0.86rem;
+    padding: 0.55rem 0.5rem;
+  }
+
   #questionInput {
     min-height: 118px;
     font-size: 0.96rem;
@@ -328,6 +395,10 @@ body {
     gap: 0.45rem;
     margin-bottom: 0.9rem;
     padding-bottom: 0.65rem;
+  }
+
+  .tarot-result-card {
+    padding: 0.8rem;
   }
 
   .result-card-name {
