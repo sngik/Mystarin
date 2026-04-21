@@ -30,8 +30,8 @@ body {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.15rem;
+  padding-right: 1.15rem;
 }
 
 .site-header {
@@ -98,7 +98,8 @@ body {
 #questionInput {
   width: 100%;
   resize: vertical;
-  min-height: 136px;
+  min-height: 132px;
+  max-height: 42vh;
   border: 1px solid #4d4377;
   border-radius: 10px;
   background: #0f0c1a;
@@ -134,6 +135,7 @@ body {
   cursor: pointer;
   font-weight: 700;
   font-size: 0.94rem;
+  min-height: 46px;
   box-shadow: 0 6px 14px rgba(80, 62, 164, 0.45);
 }
 
@@ -150,6 +152,7 @@ body {
   cursor: pointer;
   font-weight: 700;
   font-size: 0.9rem;
+  min-height: 46px;
 }
 
 #resetButton:hover {
@@ -169,6 +172,8 @@ body {
   padding: 1rem;
   color: var(--text-muted);
   background: rgba(16, 13, 29, 0.62);
+  overflow-wrap: break-word;
+  word-break: keep-all;
 }
 
 .result-empty {
@@ -187,6 +192,7 @@ body {
   margin: 0 0 1rem;
   color: #d5ceef;
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .result-card-line {
@@ -229,6 +235,7 @@ body {
   margin: 0;
   line-height: 1.7;
   color: var(--text-main);
+  overflow-wrap: anywhere;
 }
 
 .keyword-list {
@@ -244,6 +251,7 @@ body {
   padding: 0.25rem 0.58rem;
   font-size: 0.8rem;
   color: #ddd5ff;
+  line-height: 1.35;
 }
 
 .site-footer {
@@ -255,6 +263,13 @@ body {
 }
 
 @media (max-width: 640px) {
+  .site-header,
+  .site-main,
+  .site-footer {
+    padding-left: 0.95rem;
+    padding-right: 0.95rem;
+  }
+
   .site-header {
     padding-top: 1.5rem;
     padding-bottom: 1rem;
@@ -263,23 +278,117 @@ body {
   .brand-wrap,
   .question-section,
   .result-section {
-    padding: 0.9rem;
+    padding: 1rem;
   }
 
   .intro-section {
     text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .intro-text {
+    font-size: 0.97rem;
+    line-height: 1.62;
+  }
+
+  .input-label {
+    font-size: 0.93rem;
+  }
+
+  #questionInput {
+    min-height: 118px;
+    font-size: 0.96rem;
+    margin-bottom: 0.85rem;
   }
 
   .result-box {
     min-height: 150px;
+    padding: 0.9rem;
   }
 
   .action-row {
     flex-direction: column;
+    gap: 0.48rem;
   }
 
   #drawButton,
   #resetButton {
     width: 100%;
+    min-height: 48px;
+    font-size: 0.95rem;
+  }
+
+  .result-section h2 {
+    font-size: 1.04rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .result-card-line {
+    align-items: flex-start;
+    gap: 0.45rem;
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.65rem;
+  }
+
+  .result-card-name {
+    font-size: 1.16rem;
+  }
+
+  .result-direction {
+    font-size: 0.78rem;
+  }
+
+  .result-label {
+    font-size: 0.92rem;
+  }
+
+  .result-text {
+    font-size: 0.95rem;
+    line-height: 1.66;
+  }
+
+  .keyword-list {
+    gap: 0.38rem;
+  }
+
+  .keyword-item {
+    font-size: 0.77rem;
+    padding: 0.22rem 0.5rem;
+  }
+
+  .result-empty {
+    text-align: left;
+    font-size: 0.95rem;
+    padding: 1rem 0.15rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header,
+  .site-main,
+  .site-footer {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .brand-wrap {
+    padding: 1.15rem 0.95rem;
+  }
+
+  .brand-title {
+    font-size: 1.75rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.78rem;
+  }
+
+  #questionInput {
+    min-height: 110px;
+    max-height: 38vh;
+  }
+
+  .result-box {
+    min-height: 138px;
   }
 }
