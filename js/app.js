@@ -77,12 +77,17 @@ function buildSingleResultMarkup(question, card, direction) {
 
 // Build result HTML for three-card mode.
 function buildTripleResultMarkup(question, selectedCards) {
+  const positionLabels = ["과거", "현재", "미래"];
+
   return `
     <article class="tarot-result">
       <p class="result-question"><strong>질문</strong> ${question}</p>
+      <p class="result-flow-note">과거-현재-미래 흐름으로 해석합니다.</p>
       <div class="result-multi">
         ${selectedCards
-          .map((item, index) => buildCardMarkup(item.card, item.direction, `${index + 1}번째 카드`))
+          .map((item, index) =>
+            buildCardMarkup(item.card, item.direction, positionLabels[index] || `${index + 1}번째 카드`)
+          )
           .join("")}
       </div>
     </article>

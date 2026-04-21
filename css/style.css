@@ -236,9 +236,21 @@ body {
 
 .result-card-order {
   margin: 0 0 0.65rem;
-  font-size: 0.82rem;
-  color: #b9afe3;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #60508f;
+  background: rgba(104, 86, 180, 0.22);
+  border-radius: 999px;
+  padding: 0.24rem 0.62rem;
+  font-size: 0.8rem;
+  color: #d6cefb;
   font-weight: 700;
+}
+
+.result-flow-note {
+  margin: -0.3rem 0 0.85rem;
+  color: #b9afe0;
+  font-size: 0.88rem;
 }
 
 .result-question {
@@ -416,6 +428,11 @@ body {
   .result-text {
     font-size: 0.95rem;
     line-height: 1.66;
+  }
+
+  .result-flow-note {
+    margin-top: -0.2rem;
+    font-size: 0.84rem;
   }
 
   .keyword-list {
