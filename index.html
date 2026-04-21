@@ -19,31 +19,62 @@
     </header>
 
     <main class="site-main">
-      <section class="intro-section service-intro">
-        <p class="intro-text">
-          Mystarin에서 오늘의 흐름을 정돈된 화면으로 확인해 보세요.
-        </p>
-        <p class="intro-subtext">
-          타로, 사주, 관상, 오늘운, 궁합까지 필요한 카테고리를 선택해 바로 이동할 수 있습니다.
-        </p>
-        <div class="hero-visual-placeholder">땡땡 이미지 자리</div>
-      </section>
+      <section class="dashboard-section" aria-label="메인 대시보드">
+        <article class="hero-card">
+          <div class="hero-content">
+            <p class="hero-label">서비스 홈</p>
+            <h2 class="hero-title">Mystarin</h2>
+            <p class="hero-subtitle">Mystery Arin</p>
+            <p class="hero-description">오늘 필요한 운세 서비스를 한 화면에서 정돈되게 확인해 보세요.</p>
+          </div>
+          <div class="hero-visual-placeholder">땡땡 이미지 자리</div>
+        </article>
 
-      <section class="category-section" aria-label="운세 카테고리">
-        <h2 class="section-title">카테고리 선택</h2>
-        <div class="category-grid">
-          <button type="button" class="category-card is-active" data-target="tarotSection">타로</button>
-          <button type="button" class="category-card" data-target="sajuSection">사주</button>
-          <button type="button" class="category-card" data-target="faceSection">관상</button>
-          <button type="button" class="category-card" data-target="todaySection">오늘운</button>
-          <button type="button" class="category-card" data-target="matchSection">궁합</button>
+        <div class="dashboard-row-two">
+          <article class="dashboard-card dashboard-card-primary">
+            <p class="dashboard-card-label">대표 기능</p>
+            <h3>타로 리딩 시작</h3>
+            <p>질문을 남기고 1장 또는 3장 카드 흐름으로 현재 상황을 살펴보세요.</p>
+            <div class="feature-visual-placeholder">타로 이미지 자리</div>
+            <button type="button" class="category-card is-active" data-target="tarotSection">타로 바로가기</button>
+          </article>
+
+          <article class="dashboard-card dashboard-card-secondary">
+            <p class="dashboard-card-label">오늘 추천</p>
+            <h3>오늘운 미리보기</h3>
+            <p>하루의 분위기와 체크 포인트를 간단히 확인하는 영역입니다.</p>
+            <div class="feature-visual-placeholder">오늘운 이미지 자리</div>
+          </article>
+        </div>
+
+        <div class="dashboard-mini-grid" aria-label="서비스 카드 목록">
+          <button type="button" class="category-card mini-service-card is-active" data-target="tarotSection">
+            <span class="mini-title">타로</span>
+            <span class="mini-desc">카드 리딩</span>
+          </button>
+          <button type="button" class="category-card mini-service-card" data-target="sajuSection">
+            <span class="mini-title">사주</span>
+            <span class="mini-desc">입력 분석 준비중</span>
+          </button>
+          <button type="button" class="category-card mini-service-card" data-target="faceSection">
+            <span class="mini-title">관상</span>
+            <span class="mini-desc">이미지 분석 준비중</span>
+          </button>
+          <button type="button" class="category-card mini-service-card" data-target="todaySection">
+            <span class="mini-title">오늘운</span>
+            <span class="mini-desc">일일 요약 준비중</span>
+          </button>
+          <button type="button" class="category-card mini-service-card" data-target="matchSection">
+            <span class="mini-title">궁합</span>
+            <span class="mini-desc">두 사람 분석 준비중</span>
+          </button>
         </div>
       </section>
 
-      <section id="tarotSection" class="feature-section" aria-label="타로 서비스">
+      <section id="tarotSection" class="feature-section tarot-detail-section" aria-label="타로 서비스">
         <div class="feature-header">
-          <h2 class="section-title">타로</h2>
-          <p class="feature-desc">질문을 입력하고 카드 흐름으로 현재 상황을 살펴보세요.</p>
+          <h2 class="section-title">타로 상세</h2>
+          <p class="feature-desc">현재 구현된 카드 리딩 기능을 여기서 바로 사용할 수 있습니다.</p>
         </div>
         <div class="feature-visual-placeholder">타로 이미지 자리</div>
         <div class="question-section" aria-label="질문 입력">
