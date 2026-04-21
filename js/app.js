@@ -5,9 +5,31 @@ const resetButton = document.getElementById("resetButton");
 const resultArea = document.getElementById("resultArea");
 const drawModeOne = document.getElementById("drawModeOne");
 const drawModeThree = document.getElementById("drawModeThree");
+const categoryButtons = document.querySelectorAll(".category-card");
 // Prepare data reference for future tarot draw logic.
 const tarotDeck = Array.isArray(window.tarotCards) ? window.tarotCards : [];
 const initialResultMessage = "카드를 뽑으면 이곳에 결과가 표시됩니다.";
+
+// Move to selected category section and update active state.
+function bindCategoryNavigation() {
+  if (!categoryButtons.length) {
+    return;
+  }
+
+  categoryButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const targetId = button.dataset.target;
+      const targetSection = targetId ? document.getElementById(targetId) : null;
+
+      categoryButtons.forEach((item) => item.classList.remove("is-active"));
+      button.classList.add("is-active");
+
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  });
+}
 
 // Return one random card from the provided deck.
 function getRandomCard(deck) {
@@ -149,3 +171,4 @@ resetButton?.addEventListener("click", () => {
 
 // Ensure the empty result state uses styled markup on page load.
 resetResultView();
+bindCategoryNavigation();

@@ -78,6 +78,84 @@ body {
   font-size: clamp(1rem, 2.2vw, 1.08rem);
 }
 
+.intro-subtext {
+  margin: 0.55rem 0 0;
+  color: #afa4d8;
+  font-size: 0.92rem;
+}
+
+.category-section,
+.feature-section {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(30, 25, 48, 0.88), rgba(19, 16, 34, 0.92));
+  border-radius: 14px;
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 10px 24px rgba(4, 3, 10, 0.35);
+}
+
+.section-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.feature-header {
+  margin-bottom: 0.9rem;
+}
+
+.feature-desc {
+  margin: 0.45rem 0 0;
+  color: #b7aed9;
+  font-size: 0.92rem;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+.category-card {
+  border: 1px solid #4d4377;
+  background: #201a35;
+  color: #ddd5ff;
+  border-radius: 10px;
+  min-height: 48px;
+  padding: 0.65rem 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.category-card.is-active {
+  border-color: #8b7be0;
+  background: linear-gradient(180deg, rgba(163, 147, 255, 0.3), rgba(127, 111, 221, 0.2));
+  color: #f2efff;
+}
+
+.placeholder-box {
+  border: 1px dashed #5a4d8c;
+  border-radius: 10px;
+  background: rgba(16, 13, 29, 0.62);
+  padding: 1rem;
+  color: #c7bde8;
+}
+
+.placeholder-box p {
+  margin: 0.35rem 0;
+}
+
+.placeholder-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #d8d0ff;
+}
+
+.placeholder-status {
+  color: #a89dd3;
+}
+
 .question-section,
 .result-section {
   border: 1px solid var(--border);
@@ -193,10 +271,9 @@ body {
   background: #2a2147;
 }
 
-.result-section h2 {
-  margin-top: 0;
+.result-title {
+  margin: 0 0 0.7rem;
   font-size: 1.12rem;
-  margin-bottom: 0.7rem;
 }
 
 .result-box {
@@ -341,6 +418,8 @@ body {
   }
 
   .brand-wrap,
+  .category-section,
+  .feature-section,
   .question-section,
   .result-section {
     padding: 1rem;
@@ -354,6 +433,20 @@ body {
   .intro-text {
     font-size: 0.97rem;
     line-height: 1.62;
+  }
+
+  .intro-subtext {
+    font-size: 0.88rem;
+    line-height: 1.58;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .category-card {
+    width: 100%;
   }
 
   .input-label {
@@ -397,7 +490,7 @@ body {
     font-size: 0.95rem;
   }
 
-  .result-section h2 {
+  .result-title {
     font-size: 1.04rem;
     margin-bottom: 0.6rem;
   }
